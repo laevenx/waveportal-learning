@@ -171,16 +171,18 @@ useEffect(() => {
         </div>
 
         <div className="bio">
-          I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and wave at me!
+          I am Grady and I am self-driving guy. so that's pretty cool right? Connect your Ethereum wallet and wave at me or leave!
         </div>
 
-        <button class="glow-on-hover" onClick={wave}>
+         {currentAccount && (
+          <button class="glow-on-hover" onClick={wave}>
           Wave at Me
         </button>
+        )}
        
 
         {!currentAccount && (
-          <button className="waveButton" onClick={connectWallet}>
+          <button className="waveButton" class="glow-on-hover" onClick={connectWallet}>
             Connect Wallet
           </button>
         )}
